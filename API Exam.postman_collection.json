@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "db8b62c4-f4ac-4e7a-af7c-716101a9ea22",
+		"name": "API Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17765918"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jon\",\r\n    \"lastName\": \"Doe\",\r\n    \"phoneNumber\": \"+972-050-4949-323\",\r\n    \"id\": \"000000000\",\r\n    \"password\": \"1qA2wS3eD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Name Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Joooooooooooooooooooooooooooooooooooooooooooon\",\r\n    \"lastName\": \"Doe\",\r\n    \"phoneNumber\": \"+972-050-4949-323\",\r\n    \"id\": \"000000000\",\r\n    \"password\": \"1qA2wS3eD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jon\",\r\n    \"lastName\": \"Doe\",\r\n    \"phoneNumber\": \"+972-050-4949-323\",\r\n    \"id\": \"000000\",\r\n    \"password\": \"1qA2wS3eD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Password Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jon\",\r\n    \"lastName\": \"Doe\",\r\n    \"phoneNumber\": \"+972-050-4949-323\",\r\n    \"id\": \"000000000\",\r\n    \"password\": \"1qa2ws3ed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Phone Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jon\",\r\n    \"lastName\": \"Doe\",\r\n    \"phoneNumber\": \"050-4949-323\",\r\n    \"id\": \"000000000\",\r\n    \"password\": \"1qA2wS3eD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "Success",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"+9720504949323\",\r\n    \"password\" : \"1qA2wS3eD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/login",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Failure",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"+9720504949323\",\r\n    \"password\" : \"1qA2wS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/login",
+							"protocol": "https",
+							"host": [
+								"fe5e883lsg",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDAwMDAwMDAiLCJ1c2VybmFtZSI6Iis5NzIwNTA0OTQ5MzIzIiwiaWF0IjoxNzAwNTgxMjY5LCJleHAiOjE3MDA1OTU2Njl9.3NLN5NMhP0CH7ckEG0rpB5njoUzHgHtTtgoKWyKhKtM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Jonathan\",\r\n    \"lastName\" : \"Doell\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user",
+					"protocol": "https",
+					"host": [
+						"fe5e883lsg",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDAwMDAwMDAiLCJ1c2VybmFtZSI6Iis5NzIwNTA0OTQ5MzIzIiwiaWF0IjoxNzAwNTgxMjY5LCJleHAiOjE3MDA1OTU2Njl9.3NLN5NMhP0CH7ckEG0rpB5njoUzHgHtTtgoKWyKhKtM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fe5e883lsg.execute-api.eu-west-1.amazonaws.com/dev/user/id",
+					"protocol": "https",
+					"host": [
+						"fe5e883lsg",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user",
+						"id"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,34 @@
+org: yzvirblis
+app: apiexam
+service: apiexam
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-west-1
+
+functions:
+  userRegistration:
+    handler: /Handlers/userRegistrationLambda.handler
+    events:
+      - http:
+          path: /user
+          method: POST
+  userLogin:
+    handler: /Handlers/userLoginLambda.handler
+    events:
+      - http:
+          path: /user/login
+          method: POST
+  userUpdate:
+    handler: /Handlers/userUpdateLambda.handler
+    events:
+      - http:
+          path: /user
+          method: PUT
+  userGet:
+    handler: /Handlers/userGetLambda.handler
+    events:
+      - http:
+          path: /user/id
+          method: GET
